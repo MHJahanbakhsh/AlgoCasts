@@ -50,6 +50,29 @@ function steps(n) {
 
 }
 
+// level up your games with recursion 
+/*the logic is little different: if the length of string is    
+less or equal to the row that we're working on,then we add a pound
+otherwise we add a ' ' 
+*/
+function steps2(n, row = 0, stair = '') {
+    if (n === row) return;
+    if (n === stair.length) {
+        console.log(stair)
+        //go for next row
+        steps2(n, row + 1)
+        return
+    }
+    if (stair.length <= row) {
+        stair += '#'
+    } else {
+        stair += ' '
+    }
+    //go for next column in current row
+    steps2(n, row, stair)
 
+
+}
+steps2(4)
 
 module.exports = steps;
