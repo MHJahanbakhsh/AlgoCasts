@@ -21,4 +21,12 @@ function vowels(string) {
     return count
 }
 
+//more concise solution with regex
+function vowels2() {
+    //match is either null or number of records found
+    //g flag stands for not stop at first found
+    //i is for case insensitive
+    const matches = str.match(/[aeiou]/gi)
+    matches ? matches.length : 0
+}
 module.exports = vowels;
