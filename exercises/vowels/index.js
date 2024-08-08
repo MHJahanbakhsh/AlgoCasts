@@ -7,6 +7,18 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+//more interview friendly solution
+function vowels(string) {
+    let count = 0
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    for (let str of string.toLowerCase().split(' ')) {
+        for (let s of str) {
+            if (vowels.includes(s)) {
+                count++
+            }
+        }
+    }
+    return count
+}
 
 module.exports = vowels;
