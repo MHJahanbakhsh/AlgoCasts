@@ -4,17 +4,22 @@
 // one to be returned) from the queue *without*
 // removing it.
 
+//it's kinda cheating using js array to implement queue!
 class Queue {
   constructor() {
     this.data = [];
   }
 
   add(record) {
-    this.data.unshift(record);
+    this.data.unshift(record); // unshift adds item to beginning
   }
 
   remove() {
     return this.data.pop();
+  }
+
+  peek() {
+    return this.data[this.data.length - 1]
   }
 }
 
