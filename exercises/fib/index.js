@@ -20,6 +20,14 @@ function fib(n) {
     }
     return current
 }
-console.log(fib(9))
+//recursive approach
+function fib2(n) {
+    if (n === 0) return 0
+    if (n === 1) return 1
+
+    return fib2(n - 1) + fib(n - 2)
+
+}
+console.log(fib2(9))
 
 module.exports = fib;
